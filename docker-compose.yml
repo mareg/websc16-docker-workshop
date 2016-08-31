@@ -12,3 +12,17 @@ php:
   volumes:
     - ./:/app
     - ./images/php-fpm/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+  links:
+    - mysql
+
+mysql:
+    image: mysql
+    volumes:
+      - /var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: db_name
+        MYSQL_USER: user
+        MYSQL_PASSWORD: pass
+    expose:
+        - 3306
