@@ -14,3 +14,4 @@ docker pull mysql:latest
 docker pull phusion/baseimage
 docker pull nmcteam/php56
 docker pull ubuntu:latest
+docker pull tonistiigi/dnsdock
