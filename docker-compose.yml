@@ -1,0 +1,7 @@
+web:
+  image: workshop/nginx
+  ports:
+    - "8080:80"
+  volumes:
+    - ./:/var/www
+    - ./images/nginx/vhost.conf:/etc/nginx/sites-enabled/vhost.conf
